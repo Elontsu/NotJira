@@ -2,13 +2,14 @@ import type { PropsWithChildren } from "react";
 import styles from "./stylex.module.css";
 
 interface Props extends PropsWithChildren {
-  onClick?: () => void,
+	onClick?: () => void;
+	className: string;
 }
 
-export function Card({ children, onClick }: Props) {
-  return (
-    <div className={styles.card} onClick={onClick}>
-      {children}
-    </div>
-  )
+export function Card({ children, onClick, className }: Props) {
+	return (
+		<div className={className} onClick={onClick}>
+			{children}
+		</div>
+	);
 }
