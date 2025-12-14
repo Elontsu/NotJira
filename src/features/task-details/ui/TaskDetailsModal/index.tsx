@@ -1,4 +1,5 @@
 import type { RootState } from "@app/providers/store";
+import type { Task } from "@entities/task";
 import { closeTaskDetails } from "@features/task-details";
 import { Modal } from "@shared/ui";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +10,7 @@ export function TaskDetailsModal() {
 	);
 	const tasks = useSelector((state: RootState) => state.taskBoard.Tasks);
 	const dispatch = useDispatch();
-	const task = tasks.find((t) => t.id === taskId);
+	const task = tasks.find((t: Task) => t.id === taskId);
 
 	if (!task || !taskId) return null;
 
