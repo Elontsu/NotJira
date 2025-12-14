@@ -1,5 +1,4 @@
 import type { PropsWithChildren } from "react";
-import styles from "./stylex.module.css";
 
 interface Props extends PropsWithChildren {
 	onClick?: () => void;
