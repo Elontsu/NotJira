@@ -1,0 +1,14 @@
+.task_card {
+	background-color: var(--bg-card);
+	color: var(--text-primary);
+	border: 1px solid var(--border-default);
+	box-shadow: var(--shadow-card);
+	border-radius: 8px;
+}
+
+.task_card:hover {
+	background-color: var(--bg-card-hover);
+	border-color: var(--color-primary);
+	/* Легкая подсветка границы */
+	cursor: pointer;
+}
